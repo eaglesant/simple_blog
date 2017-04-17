@@ -19,3 +19,6 @@
 .field_with_errors textarea {
 	border-color: red;
 }
+.message_error {
+	color: red;
+}
