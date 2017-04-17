@@ -9,6 +9,18 @@
   </head>
 
   <body>
+  <div class="container">
+  <div id="navigation">
+	<ul>
+		<li><%= link_to "Home", '/' %></li>
+		<li><%= link_to "Articles", 'articles' %></li>
+		<li><%= link_to "Contacts", 'contacts' %></li>
+		<li><%= link_to "About", 'about' %></li>
+		<li><%= link_to "Terms", 'terms' %></li>
+	</ul>
+</div>
+  	
     <%= yield %>
+  </div>
   </body>
 </html>
