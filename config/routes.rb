@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get '/articles', to: 'articles#new'
   get '/about', to: 'about#show'
   get '/terms', to: 'terms#show'
+  get '/works', to: 'pages#works'
+  get '/links', to: 'pages#links'
 
   resources :articles
   resource :contacts, only: [:new, :create], path_names: { :new => ''}
