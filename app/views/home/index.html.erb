@@ -1,7 +1,11 @@
 <h1>All articles</h1>
-
-<% @articles.each do |art| %>
+<div id="article">
+	<% @articles.each do |art| %>
 <p><%= art.title %></p>
 <p><%= art.text %></p>
-
+<!-- <a href="/articles/<%= art.id %>">Read more</a> -->
+<%= link_to 'Read more', article_path(art) %>
+<hr>
 <% end %>
+</div>
+
