@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get '/links', to: 'pages#links'
 
   resources :articles do
-    resources :comments
+    resource :comments, only: [:create]
   end
   resource :contacts, only: [:new, :create], path_names: { :new => ''}
   resource :about, only: [:show], path_names: { :show => ''}
