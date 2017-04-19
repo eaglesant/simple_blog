@@ -8,15 +8,15 @@
 <h3>Comments</h3>
 <% if @comments.size != 0 %>
 <% @comments.each do |com| %>
-	<p><%= com.body %></p>
-	<p><%= com.author %></p>
+	<p><i> <%= com.author %> said:</i><br>
+	<%= com.body %></p>
 	<hr>
 <% end %>
 <% else %>
 <p>No comments yet!</p>
 <% end %>
 <!-- ============================================== -->
-
+<h3>Add your comment:</h3>
 <%= form_for([@article,@article.comments.build]) do |f| %>
  <p>
 	<%= f.label :author %><br>
