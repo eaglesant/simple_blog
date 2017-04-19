@@ -33,9 +33,10 @@ end
 
 def destroy
   @article = Article.find(params[:id])
-  @article.delete
+   if @article.destroy
 
   redirect_to '/'
+end
 end
 
 private
