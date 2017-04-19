@@ -8,7 +8,9 @@ Rails.application.routes.draw do
   get '/works', to: 'pages#works'
   get '/links', to: 'pages#links'
 
-  resources :articles
+  resources :articles do
+    resources :comments
+  end
   resource :contacts, only: [:new, :create], path_names: { :new => ''}
   resource :about, only: [:show], path_names: { :show => ''}
   resource :terms, only: [:show], path_names: { :show => ''}
