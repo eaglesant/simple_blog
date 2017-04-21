@@ -21,7 +21,9 @@
 		<li><%= link_to "Links", links_path %></li>
 	</ul>
 </div>
-<a href="/users/sign_in">Sign In</a> | <a href="/users/sign_out" data-method="delete">Sign Out</a>
+<%= link_to 'Sign In', new_user_session_path %> | <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+<br><br>
+
  <p class="notice"><%= notice %></p>
  <p class="alert"><%= alert %></p>
   	
